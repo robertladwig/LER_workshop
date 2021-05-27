@@ -1,4 +1,4 @@
-FROM rocker/verse:4.0.0-ubuntu18.04
+FROM rocker/verse:3.6.3-ubuntu18.04
 
 MAINTAINER  "Tadgh Moore" tadhgm@vt.edu 
 
