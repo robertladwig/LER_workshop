@@ -1,4 +1,4 @@
-FROM rocker/verse:3.6.3-ubuntu18.04
+FROM rocker/verse:4.0.5
 
 MAINTAINER  "Tadgh Moore" tadhgm@vt.edu 
 
@@ -9,6 +9,7 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
 	git \
 	build-essential \
 	libnetcdf-dev \
+	libnetcdff-dev \
 	tzdata \
 	ca-certificates \
 	&& update-ca-certificates
