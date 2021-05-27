@@ -1,4 +1,4 @@
-FROM rocker/verse:4.0.5
+FROM rocker/verse:4.0.0-ubuntu18.04
 
 MAINTAINER  "Tadgh Moore" tadhgm@vt.edu 
 
@@ -16,7 +16,7 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
 
 RUN 	Rscript -e 'install.packages("ncdf4")' \
 	&& Rscript -e 'install.packages("devtools")' \
-	&& Rscript -e 'devtools::install_github("FLARE-forecast/GLM3r")' \
+	&& Rscript -e 'devtools::install_github("robertladwig/GLM3r",ref="v3.1.1")' 
 	&& Rscript -e 'devtools::install_github("USGS-R/glmtools", ref = "ggplot_overhaul")' \
 	&& Rscript -e 'devtools::install_github("GLEON/rLakeAnalyzer")' \
 	&& Rscript -e 'devtools::install_github("aemon-j/FLakeR", ref = "inflow")' \
